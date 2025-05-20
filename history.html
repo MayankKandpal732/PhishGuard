@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Detection History</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">PhishGuard</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Dashboard</a></li>
+      <li><a href="history.html" class="nav-link active">History</a></li>
+      <li><a href="faq.html" class="nav-link">FAQ</a></li>
+    </ul>
+    <button id="darkModeToggle" class="dark-toggle" title="Toggle dark mode">🌙</button>
+  </nav>
+
+  <main>
+    <section id="history" class="section active">
+      <h1>History</h1>
+      <div class="history-controls">
+        <input type="text" id="historySearch" placeholder="Search history...">
+        <button id="downloadCsv">Download CSV</button>
+        <label class="upload-btn">
+          <input type="file" id="uploadCsv" accept=".csv" style="display:none;">
+          <span>Upload CSV</span>
+        </label>
+      </div>
+      <table id="historyTable">
+        <thead>
+          <tr><th>Timestamp</th><th>URL</th><th>Status</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <footer class="footer">
+    <span>© 2024 PhishGuard | Stay Safe Online</span>
+  </footer>
+  <script src="history.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html> 

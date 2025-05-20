@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Detection FAQ</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">PhishGuard</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Dashboard</a></li>
+      <li><a href="history.html" class="nav-link">History</a></li>
+      <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+    </ul>
+    <button id="darkModeToggle" class="dark-toggle" title="Toggle dark mode">🌙</button>
+  </nav>
+
+  <main>
+    <section id="faq" class="section active">
+      <h1>FAQs</h1>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-question">What is phishing?</div>
+          <div class="faq-answer">Phishing is a type of cyberattack where attackers impersonate legitimate organizations via email, text message, or other means to steal sensitive information.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How does this site detect phishing?</div>
+          <div class="faq-answer">We use Google's Safe Browsing API to check if a URL is known for phishing, malware, or other threats.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Is my data stored?</div>
+          <div class="faq-answer">Your check history is stored only in your browser (localStorage) and never sent to any server.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">What should I do if I find a phishing site?</div>
+          <div class="faq-answer">Avoid entering any information and report the site to Google Safe Browsing or your IT department.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">How can I protect myself from phishing?</div>
+          <div class="faq-answer">Be cautious with links, verify sender addresses, use security software, and never share sensitive info unless certain.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Can I use this tool on my phone or tablet?</div>
+          <div class="faq-answer">Yes! PhishGuard is fully responsive and works on all modern devices, including phones and tablets.</div>
+        </div>
+      </div>
+      <form id="faqForm">
+        <input type="text" id="faqQuestion" placeholder="Ask a question..." required>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <footer class="footer">
+      <span>© 2024 PhishGuard | Stay Safe Online</span>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="faq.js"></script>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', function() {
+        this.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Safe Browsing Test",
+  "version": "1.0",
+  "permissions": [
+    "notifications",
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://safebrowsing.googleapis.com/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/alert.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

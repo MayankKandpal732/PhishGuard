@@ -1,0 +1,103 @@
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 340px;
+  padding: 32px 24px 24px 24px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  margin: 24px auto;
+  text-align: center;
+}
+h1 {
+  color: #2d3a4b;
+  margin-bottom: 28px;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+}
+#urlInput {
+  width: 90%;
+  padding: 12px 14px;
+  border: 1px solid #b0bec5;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  margin-bottom: 18px;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+#urlInput:focus {
+  border: 1.5px solid #1976d2;
+}
+#checkBtn {
+  background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.2s;
+}
+#checkBtn:hover {
+  background: linear-gradient(90deg, #1565c0 0%, #1e88e5 100%);
+}
+#status {
+  margin: 20px 0 18px 0;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 10px 0;
+  border-radius: 6px;
+  min-height: 28px;
+}
+#status.safe {
+  color: #1b5e20;
+  background: #c8e6c9;
+}
+#status.unsafe {
+  color: #b71c1c;
+  background: #ffcdd2;
+}
+#status.error {
+  color: #ff6f00;
+  background: #ffe0b2;
+}
+#downloadLogBtn {
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+#downloadLogBtn:hover {
+  background: linear-gradient(90deg, #11998e 0%, #0575e6 100%);
+}
+#goToBtn {
+  background: linear-gradient(90deg, #ffb300 0%, #1976d2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 1;
+}
+#goToBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#goToBtn:hover:enabled {
+  background: linear-gradient(90deg, #1976d2 0%, #ffb300 100%);
+} 
